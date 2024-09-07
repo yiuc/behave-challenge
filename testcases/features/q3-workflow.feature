@@ -25,6 +25,9 @@ Feature: Evaluate ticket buying workflow
   Scenario: Confirm order
     Given <Statement 1>
     And <Statement 2>
-    And <Statement 3>
+    And A request payload template
+    """
+    {FITB}
+    """
     When <Statement 4>
     Then <Statement 5>

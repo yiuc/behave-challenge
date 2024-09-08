@@ -39,6 +39,7 @@ The test case verifies the security and caching behavior of the application by c
 1. Jump into the Docker environment
 2. `export APP1_URL=${APP1_URL}`
 3. `behave testcases/features/q1-header.feature`
+![](./image/q1-output.png)
 4. `analyst_result` you should get the answer like below ![image](./image/q1-answer-example.png)
 5. visit CTF portal to submit your answer
 
@@ -51,6 +52,7 @@ Under this challenge, you will be testing a mass assignment vulnerability's REST
 3. Update the test case to get the pass result
 4. `behave testcases/features/q2-mass-assignment.feature`
 5. `analyst_result` you should get the answer
+![answer example](image/q2-answer-example.png)
 6. visit CTF portal to submit your answer
 
 # Question 2b
@@ -62,6 +64,7 @@ Under this challenge, you will be testing a mass assignment vulnerability's REST
 3. Update the test case endpoint to `/rest/v2/user` and trying to update the result to match the fix
 4. `behave testcases/features/q2-mass-assignment.feature`
 5. `analyst_result` you should get the answer
+![answer example](image/q2-answer-example.png)
 6. visit CTF portal to submit your answer
 
 Attached below is the User object structure
@@ -94,6 +97,7 @@ Execution
 2. `export APP1_URL=${APP1_URL}`
 3. Update the test case 
 4. `behave testcases/features/q3-workflow.feature`
+![output example](./image/q3-output.png)
 5. `analyst_result` you should get the answer
 6. visit CTF portal to submit your answer
 

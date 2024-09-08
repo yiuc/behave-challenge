@@ -6,7 +6,7 @@ Feature: Mass Assignment
     And I set variable "sid" to "1"
     And I set variable "username" to "student1"
     And I set variable "email" to "student1@securitychampion"
-    And I set variable "group" to "{FITB}"
+    And I set variable "group" to "admin"
 
   @runner.continue_after_failed_step
   Scenario: Do Mass Assignment with v1

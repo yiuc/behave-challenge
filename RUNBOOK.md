@@ -8,15 +8,33 @@
 
 # Prerequisites
 
-- Access the AWS workshop account
-- create the cloud 9 instance
-- Download the material from git hub
-- Download the behave Docker image from the provided ECR URL. `docker pull ${Behave_ECR}`
-- jump into Docker env to start on `docker run --rm -it -v ./testcases:/home/bddtest/testcases ${Behave_ECR} bash`
+- [ ] [Workshop setup](#workshop-account-setup)
+- [ ] [Cloud9 Provision](#cloud9-provision-and-setup)
+
+## Workshop account setup
+
+Recommend to use a new private mode browser to start your workshop
+![](./image/private-browser.png)
+
+1. Click the WORKSHOP_STUDIO link and click the `Email one-time password(OTP)` with your company email address
+2. Check your mail box and follow instruction to open the page
+3. Review the T&C and continue
+4. Open the AWS console from the menu in left ![left hand side](./image/open-console.png)
+
+REMARK - If you close the browser unexpected. Go through step 1 with the same email, you can catch up the progress.
+
+## Cloud9 Provision and Setup
+
+1. create the cloud 9 instance follow instruction - https://catalog.us-east-1.prod.workshops.aws/workshops/263120a5-3578-4ff3-822b-3b817ea7e3eb/en-US/30-cloud9
+2. Download the material from git hub in **cloud9** instance `git clone $GITHUB_URL`
+3. Download the behave Docker image from the provided ECR URL. `docker pull ${Behave_ECR}`
+4. jump into Docker env to start on `docker run --rm -it -v ./behave-challenge/testcases:/home/bddtest/testcases ${Behave_ECR} bash`
 
 # Question 1
 
-Build your BDD environment and execute the first test case. This command runs a Docker container with the behave-tool image, mounts the `./testcases` directory from the host to `/home/bddtest/testcases` inside the container, sets the `APP1_URL` environment variable to the provided URL, and executes the `behave` command with the [q1-header.feature](./features/q1-header.feature) file.
+Build your BDD environment and execute the first test case. This command runs a Docker container with the behave-tool image, mounts the `./testcases` directory from the host to `/home/bddtest/testcases` inside the container, sets the `APP1_URL` environment variable to the provided URL, and executes the `behave` command with the [q1-header.feature](./features/q1-header.feature) file. 
+
+The test case verifies the security and caching behavior of the application by checking the response headers for a specific endpoint. The test ensures that the application is sending the appropriate security-related headers and caching directives in the response.
 
 1. Jump into the Docker environment
 2. `export APP1_URL=${APP1_URL}`
@@ -26,7 +44,7 @@ Build your BDD environment and execute the first test case. This command runs a 
 
 # Question 2a
 
-Under this challenge, you will be testing a mass assignment vulnerability's REST API endpoint of a web application. Using the Behave framework, you are to construct a Behavior-Driven Development (BDD) test script to test the /rest/v1/user, which is vulnerable to mass assignmentuser endpoint, trying to create a new user. Revised the case [q2-mass-assignment](./features/q2-mass-assignment.feature) fill int the blank **(FITB)** and receive the pass result.
+Under this challenge, you will be testing a mass assignment vulnerability's REST API endpoint of a web application. Using the Behave framework, you are to construct a Behavior-Driven Development (BDD) test script to test the /rest/v1/user, which is vulnerable to mass assignmentuser endpoint, trying to create a new user. Revised the case [q2-mass-assignment](./features/q2-mass-assignment.feature) fill int the blank **(FITB)** and receive the pass result with any group. 
 
 1. Jump into the Docker environment
 2. `export APP2_URL=${APP2_URL}`
@@ -37,7 +55,7 @@ Under this challenge, you will be testing a mass assignment vulnerability's REST
 
 # Question 2b
 
-/rest/v2/user is an updated version that includes the create user function to address the mass assignment issue. If you use the **Question 2a** test case to test the /rest/v2/user, you will receive a fail message; adjust the test case to test the endpoint already resolving the mass assignment issue. 
+**/rest/v2/user** is an updated version that includes the create user function to address the mass assignment issue. Reuse the **Question 2a** test case and update the path to **/rest/v2/user**, you will receive a fail message as v2 already address the mass assignment problem; adjust the 2a test case as a real test case to validate endpoint if it has been addressed the mass assignment when create a user. 
 
 1. Jump into the Docker environment
 2. `export APP2_URL=${APP2_URL}`

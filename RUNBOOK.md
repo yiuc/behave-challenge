@@ -32,7 +32,7 @@ REMARK - If you close the browser unexpected. Go through step 1 with the same em
 
 # Question 1
 
-Build your BDD environment and execute the first test case. This command runs a Docker container with the behave-tool image, mounts the `./testcases` directory from the host to `/home/bddtest/testcases` inside the container, sets the `APP1_URL` environment variable to the provided URL, and executes the `behave` command with the [q1-header.feature](./features/q1-header.feature) file. 
+Build your BDD environment and execute the first test case. This command runs a Docker container with the behave-tool image, mounts the `./testcases` directory from the host to `/home/bddtest/testcases` inside the container, sets the `APP1_URL` environment variable to the provided URL, and executes the `behave` command with the [q1-header.feature](./testcases/features/q1-header.feature) file. 
 
 The test case verifies the security and caching behavior of the application by checking the response headers for a specific endpoint. The test ensures that the application is sending the appropriate security-related headers and caching directives in the response.
 
@@ -45,7 +45,7 @@ The test case verifies the security and caching behavior of the application by c
 
 # Question 2a
 
-Under this challenge, you will be testing a mass assignment vulnerability's REST API endpoint of a web application. Using the Behave framework, you are to construct a Behavior-Driven Development (BDD) test script to test the /rest/v1/user, which is vulnerable to mass assignmentuser endpoint, trying to create a new user. Revised the case [q2-mass-assignment](./features/q2-mass-assignment.feature) fill int the blank **(FITB)** and receive the pass result with any group. 
+Under this challenge, you will be testing a mass assignment vulnerability's REST API endpoint of a web application. Using the Behave framework, you are to construct a Behavior-Driven Development (BDD) test script to test the /rest/v1/user, which is vulnerable to mass assignmentuser endpoint, trying to create a new user. Revised the case [q2-mass-assignment](./testcases/features/q2-mass-assignment.feature) fill int the blank **(FITB)** and receive the pass result with any group. 
 
 1. Jump into the Docker environment
 2. `export APP2_URL=${APP2_URL}`
@@ -90,7 +90,7 @@ public class User {
 
 # Question 3
 
-Compose a BDD test case to retrieve the answer in the confirm order phase, referencing the [API doc](./API-DOC.md) and the flowchart provided. The template is [q3-workflow.feature](./features/q3-workflow.feature), and the testcase is being constructed by filling in the blank (FITB) with the statement supplied in order to obtain the answer to question 3.
+Compose a BDD test case to retrieve the answer in the confirm order phase, referencing the [API doc](./API-DOC.md) and the flowchart provided. The template is [q3-workflow.feature](./testcases/features/q3-workflow.feature), and the testcase is being constructed by filling in the blank (FITB) with the statement supplied in order to obtain the answer to question 3.
 
 Execution
 1. Jump into the Docker environment

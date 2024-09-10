@@ -1,15 +1,14 @@
 # Agenda
 
-- 20mins briefing / Video Demo / Github
-- Environment setup 15min
-- 45mins Working on Q1-Q4
-- 15mins debrief (Optional)
-
+1. 20mins briefing / Video Demo / Github
+2. Prerequisites setup around 15min
+3. 45mins Working on Q1-Q4
+4. 15mins debrief (Optional)
 
 # Prerequisites
 
-- [ ] [Workshop setup](#workshop-account-setup)
-- [ ] [Cloud9 Provision](#cloud9-provision-and-setup)
+- [ ] Complete r[Workshop setup](#workshop-account-setup) to get a Temporoy AWS account
+- [ ] In the AWS account complete [Cloud9 Provision](#cloud9-provision-and-setup)
 
 ## Workshop account setup
 

@@ -25,9 +25,7 @@ REMARK - If you close the browser unexpected. Go through step 1 with the same em
 ## Cloud9 Provision and Setup
 
 1. create the cloud 9 instance follow instruction - https://catalog.us-east-1.prod.workshops.aws/workshops/263120a5-3578-4ff3-822b-3b817ea7e3eb/en-US/30-cloud9
-2. Download the material from git hub in **cloud9** instance `git clone $GITHUB_URL`
-3. Download the behave Docker image from the provided ECR URL. `docker pull ${Behave_ECR}`
-4. jump into Docker env to start on `docker run --rm -it -v ./behave-challenge/testcases:/home/bddtest/testcases ${Behave_ECR} bash`
+2. Download the material from git hub in **cloud9** instance `git clone https://github.com/yiuc/behave-challenge`
 
 # Question 1
 
@@ -44,15 +42,17 @@ The test case verifies the security and caching behavior of the application by c
 
 # Question 2a
 
-Under this challenge, you will be testing a mass assignment vulnerability's REST API endpoint of a web application. Using the Behave framework, you are to construct a Behavior-Driven Development (BDD) test script to test the /rest/v1/user, which is vulnerable to mass assignmentuser endpoint, trying to create a new user. Revised the case [q2-mass-assignment](./testcases/features/q2-mass-assignment.feature) fill int the blank **(FITB)** and receive the pass result with any group. 
+[Open question](https://github.com/yiuc/behave-challenge/blob/main/RUNBOOK.md#question-2a) to follow the instruction. Under this challenge, you will be testing a mass assignment vulnerability's REST API endpoint of a web application. Using the Behave framework, you are to construct a Behavior-Driven Development (BDD) test script to test the /rest/v1/user, which is vulnerable to mass assignmentuser endpoint, trying to create a new user. Revised the case [q2-mass-assignment](./testcases/features/q2-mass-assignment.feature) fill int the blank **(FITB)** and receive the pass result with any group. 
 
-1. Jump into the Docker environment
-2. `export APP2_URL=${APP2_URL}`
-3. Update the test case to get the pass result
-4. `behave testcases/features/q2-mass-assignment.feature`
-5. `analyze_result` you should get the answer
+1. Follow the [Workshop account setup](https://github.com/yiuc/behave-challenge/blob/main/RUNBOOK.md#prerequisites) instruction to access temporory AWS account through [Workshop-account-ULR](https://bit.ly/security-champion-2024) 
+2. Setup the [Cloud9](https://github.com/yiuc/behave-challenge/blob/main/RUNBOOK.md#cloud9-provision-and-setup) envrionment
+3. Jump into the Docker environment
+4. `execution.sh testcases/features/q2-mass-assignment.feature`
+5. Update the test case to get the pass result
 ![answer example](image/q2-answer-example.png)
 6. visit CTF portal to submit your answer
+
+[Workshop-account-ULR](https://bit.ly/security-champion-2024) https://bit.ly/security-champion-2024
 
 # Question 2b
 
@@ -89,16 +89,18 @@ public class User {
 
 # Question 3
 
-Compose a BDD test case to retrieve the answer in the confirm order phase, referencing the [API doc](./API-DOC.md) and the flowchart provided. The template is [q3-workflow.feature](./testcases/features/q3-workflow.feature), and the testcase is being constructed by filling in the blank (FITB) with the statement supplied in order to obtain the answer to question 3.
+[Open question](https://github.com/yiuc/behave-challenge/blob/main/RUNBOOK.md#question-3) to follow the instruction to compose a BDD test case to retrieve the answer in the confirm order phase, referencing the [API doc](./API-DOC.md) and the flowchart provided. The template is [q3-workflow.feature](./testcases/features/q3-workflow.feature), and the testcase is being constructed by filling in the blank (FITB) with the statement supplied in order to obtain the answer to question 3.
 
 Execution
-1. Jump into the Docker environment
-2. `export APP1_URL=${APP1_URL}`
-3. Update the test case 
-4. `behave testcases/features/q3-workflow.feature`
+1. Follow the [Workshop account setup](https://github.com/yiuc/behave-challenge/blob/main/RUNBOOK.md#prerequisites) instruction to access temporory AWS account through [Workshop-account-ULR](https://bit.ly/security-champion-2024) 
+2. Setup the [Cloud9](https://github.com/yiuc/behave-challenge/blob/main/RUNBOOK.md#cloud9-provision-and-setup) envrionment
+3. Jump into the Docker environment
+4. `execution.sh testcases/features/q3-workflow.feature`
 ![output example](./image/q3-output.png)
 5. `analyze_result` you should get the answer
 6. visit CTF portal to submit your answer
+
+[Workshop-account-ULR](https://bit.ly/security-champion-2024) https://bit.ly/security-champion-2024
 
 ## Workflow
 

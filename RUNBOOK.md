@@ -24,8 +24,7 @@ REMARK - If you close the browser unexpected. Go through step 1 with the same em
 
 ## Cloud9 Provision and Setup
 
-1. create the cloud 9 instance follow instruction - https://catalog.us-east-1.prod.workshops.aws/workshops/263120a5-3578-4ff3-822b-3b817ea7e3eb/en-US/30-cloud9
-2. Download the material from git hub in **cloud9** instance `git clone https://github.com/yiuc/behave-challenge`
+1. Download the material from git hub in **cloud9** instance `git clone https://github.com/yiuc/behave-challenge`
 
 # Question 1
 
